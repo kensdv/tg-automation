@@ -1,0 +1,26 @@
+{
+    "api_id": "",
+    "api_hash": "",
+    "phone_number": "",
+    "source_group_ids": [],
+    "destination_group_id": -100,
+    "trading_bot_id": "@menelaus_trojanbot",
+    "specified_group_id": "",
+    "specified_user_id": [],
+
+    "group_notifiers": {  
+        "": "2",
+        "": "1",
+        "": "2",
+        "": "3",
+        "": "3",
+        "": "4"
+    },
+    
+    "notifier_keys": {
+        "1": "Risky Gamble 🟪",
+        "2": "Safe Gamble ⬜️",
+        "3": "Safe Call 🟩",
+        "4": "Black Gold ⬛️"
+    }
+}
