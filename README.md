@@ -22,19 +22,21 @@ An intelligent and efficient Telegram bot that monitors specific groups, extract
 3. Obtain the following credentials from the [Telegram Developer Portal](https://my.telegram.org/)):
     api_id
     api_hash
+   
 
-## 🛠️ Setup Instructions
+### 🛠️ Setup Instructions
 
-### 1. Clone the Repository
-bash
- git clone https://github.com/kensdv/tg-automation
- cd tg-automation.
+1. **Clone the Repository**  
+   Run the following commands in your terminal:
 
-### 2. Create config.json
-Create a config.json file in the root directory with the following structure:
+   ```bash
+   git clone https://github.com/kensdv/tg-automation
+   cd tg-automation
 
-json
+2. **Create config.json**
+Create a `config.json` file in the root directory with the following structure:
 
+```json
 {
   "api_id": "<YOUR_API_ID>",
   "api_hash": "<YOUR_API_HASH>",
@@ -53,82 +55,60 @@ json
 }
 
 
-### 3. User Inputs Required
 
-API Credentials:
-<YOUR_API_ID>: Your Telegram API ID.
-<YOUR_API_HASH>: Your Telegram API hash.
-Group-Specific Inputs:
-<GROUP_ID_X>: Telegram group IDs to monitor.
-<NOTIFIER_KEY_X>: Keys defining the custom notifier text for specific groups.
-Forwarding Targets:
-<DESTINATION_GROUP_ID>: The group ID where messages will be forwarded.
-<TRADING_BOT_ID>: The bot ID for trading-related forwards.
-Filters:
-<SPECIFIED_GROUP_ID>: The group where messages from a specific user will be filtered.
-<SPECIFIED_USER_ID>: The Telegram user ID to monitor in the specified group.
-
-
-### ▶️ Run the Bot
 After completing the setup, start the bot with:
-
-bash
-Copy code
+```
 python bot.py
 
 
 ### 🔍 How It Works
-Message Monitoring:
 
-The bot listens to messages from the configured groups.
-Filters messages by:
-Solana wallet address format (32–44 alphanumeric characters).
-URLs matching pump.fun or dexscreener.com.
-Content Filtering:
+#### Message Monitoring:
+- The bot listens to messages from the configured groups.
+- Filters messages by:
+  - Solana wallet address format (32–44 alphanumeric characters).
+  - URLs matching `pump.fun` or `dexscreener.com`.
 
-Filters out duplicate wallet addresses already forwarded.
-Applies user-specific filtering within a designated group.
-Message Forwarding:
+#### Content Filtering:
+- Filters out duplicate wallet addresses already forwarded.
+- Applies user-specific filtering within a designated group.
 
-Constructs a forwarding message containing:
-Detected wallet addresses.
-Matching URLs.
-A group-specific notifier.
-Forwards the message to:
-A destination group.
-A trading bot.
-Duplicate Prevention:
+#### Message Forwarding:
+- Constructs a forwarding message containing:
+  - Detected wallet addresses.
+  - Matching URLs.
+  - A group-specific notifier.
+- Forwards the message to:
+  - A destination group.
+  - A trading bot.
 
-Tracks forwarded content using a timestamped dictionary.
-Automatically clears old entries every 24 hours.
+#### Duplicate Prevention:
+- Tracks forwarded content using a timestamped dictionary.
+- Automatically clears old entries every 24 hours.
+
 
 ## 💡 Example Workflow
-A monitored group sends a message:
-kotlin
-Copy code
-Check out this token: https://pump.fun/token123
-Wallet: E7dhJ2NCjf82HqYzLFGfFhYh6zMzT7uL5Dg7ZZpJ
-The bot detects:
-Solana address: E7dhJ2NCjf82HqYzLFGfFhYh6zMzT7uL5Dg7ZZpJ
-URL: https://pump.fun/token123
-Constructs a message:
-arduino
-Copy code
-🚨 Risky Gamble 🟪
 
-E7dhJ2NCjf82HqYzLFGfFhYh6zMzT7uL5Dg7ZZpJ
-https://pump.fun/token123
-Forwards the message to:
-A destination group.
-A trading bot.
+1. A monitored group sends a message:
+
+2. The bot detects:
+- Solana address: `E7dhJ2NCjf82HqYzLFGfFhYh6zMzT7uL5Dg7ZZpJ`
+- URL: `https://pump.fun/token123`
+
+3. The bot constructs a message:
+
+4. The bot forwards the message to:
+- A destination group.
+- A trading bot.
+
 
 ## 🤝 Contributions
 We welcome contributions to enhance the bot's functionality! Here's how you can contribute:
 
-Fork this repository.
-Create a new branch for your feature or bug fix.
-Commit your changes and submit a pull request.
+1. **Fork this repository**.
+2. **Create a new branch** for your feature or bug fix.
+3. **Commit your changes** and submit a pull request.
 
 ## 🙌 Acknowledgments
-The Telethon library for its seamless integration with the Telegram API.
-The blockchain and Telegram communities for their support and inspiration.
+- The [Telethon library](https://github.com/LonamiWebs/Telethon) for its seamless integration with the Telegram API.
+- The blockchain and Telegram communities for their support and inspiration.
