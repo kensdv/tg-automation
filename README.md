@@ -23,54 +23,52 @@ An intelligent and efficient Telegram bot that monitors specific groups, extract
     api_id
     api_hash
 
-##  🛠️ Setup Instructions
-
-1. **Clone the Repository**
-   
+🛠️ Setup Instructions
+1. Clone the Repository
+bash
+Copy code
 git clone https://github.com/kensdv/tg-automation
 cd tg-automation
-
-3. Create config.json
+2. Create config.json
 Create a config.json file in the root directory with the following structure:
 
+json
+Copy code
 {
-    "api_id": "<YOUR_API_ID>",
-    "api_hash": "<YOUR_API_HASH>",
-    "group_notifiers": {
-        "<GROUP_ID_1>": "<NOTIFIER_KEY_1>",
-        "<GROUP_ID_2>": "<NOTIFIER_KEY_2>"
-    },
-    "notifier_keys": {
-        "<NOTIFIER_KEY_1>": "<CUSTOM_NOTIFIER_TEXT_1>",
-        "<NOTIFIER_KEY_2>": "<CUSTOM_NOTIFIER_TEXT_2>"
-    },
-    "destination_group_id": "<DESTINATION_GROUP_ID>",
-    "trading_bot_id": "<TRADING_BOT_ID>",
-    "specified_group_id": "<SPECIFIED_GROUP_ID>",
-    "specified_user_id": "<SPECIFIED_USER_ID>"
+  "api_id": "<YOUR_API_ID>",
+  "api_hash": "<YOUR_API_HASH>",
+  "group_notifiers": {
+    "<GROUP_ID_1>": "<NOTIFIER_KEY_1>",
+    "<GROUP_ID_2>": "<NOTIFIER_KEY_2>"
+  },
+  "notifier_keys": {
+    "<NOTIFIER_KEY_1>": "<CUSTOM_NOTIFIER_TEXT_1>",
+    "<NOTIFIER_KEY_2>": "<CUSTOM_NOTIFIER_TEXT_2>"
+  },
+  "destination_group_id": "<DESTINATION_GROUP_ID>",
+  "trading_bot_id": "<TRADING_BOT_ID>",
+  "specified_group_id": "<SPECIFIED_GROUP_ID>",
+  "specified_user_id": "<SPECIFIED_USER_ID>"
 }
-
-
-**User Inputs Required:**
+3. User Inputs Required
 API Credentials:
 <YOUR_API_ID>: Your Telegram API ID.
 <YOUR_API_HASH>: Your Telegram API hash.
 Group-Specific Inputs:
 <GROUP_ID_X>: Telegram group IDs to monitor.
-<NOTIFIER_KEY_X>: Key to define the custom notifier text for specific groups.
+<NOTIFIER_KEY_X>: Keys defining the custom notifier text for specific groups.
 Forwarding Targets:
 <DESTINATION_GROUP_ID>: The group ID where messages will be forwarded.
 <TRADING_BOT_ID>: The bot ID for trading-related forwards.
 Filters:
 <SPECIFIED_GROUP_ID>: The group where messages from a specific user will be filtered.
 <SPECIFIED_USER_ID>: The Telegram user ID to monitor in the specified group.
-
-
 ▶️ Run the Bot
-After completing the setup:
+After completing the setup, start the bot with:
 
-```bash
-python bot.py.
+bash
+Copy code
+python bot.py
 
 
  🔍 How It Works
