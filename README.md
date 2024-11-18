@@ -55,10 +55,30 @@ Create a `config.json` file in the root directory with the following structure:
 }
 
 
+```
+### Explanation of Configuration Fields
+
+#### API Credentials:
+- **api_id**: Your unique Telegram API ID. You can get this by registering on [my.telegram.org](https://my.telegram.org).
+- **api_hash**: Your unique Telegram API hash, also available from [my.telegram.org](https://my.telegram.org).
+
+#### Group-Specific Inputs:
+- **group_notifiers**: A mapping of group IDs to custom notifier keys. These keys help you associate specific notifier texts with different groups.
+- **notifier_keys**: A mapping of notifier keys to custom text messages. These texts will be used as notifications when messages are forwarded from specific groups.
+
+#### Forwarding Targets:
+- **destination_group_id**: The Telegram group ID where the bot will forward the detected messages.
+- **trading_bot_id**: The bot ID of the trading bot to which messages containing wallet addresses or URLs will be forwarded.
+
+#### Filters:
+- **specified_group_id**: The ID of the group where messages from a particular user will be filtered.
+- **specified_user_id**: The Telegram user ID of the individual whose messages will be filtered within the specified group.
+
 
 After completing the setup, start the bot with:
-```
+```bash
 python bot.py
+```
 
 
 ### 🔍 How It Works
