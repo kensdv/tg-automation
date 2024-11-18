@@ -23,17 +23,18 @@ An intelligent and efficient Telegram bot that monitors specific groups, extract
     api_id
     api_hash
 
-🛠️ Setup Instructions
-1. Clone the Repository
+## 🛠️ Setup Instructions
+
+### 1. Clone the Repository
 bash
-Copy code
-git clone https://github.com/kensdv/tg-automation
-cd tg-automation
-2. Create config.json
+ git clone https://github.com/kensdv/tg-automation
+ cd tg-automation.
+
+### 2. Create config.json
 Create a config.json file in the root directory with the following structure:
 
 json
-Copy code
+
 {
   "api_id": "<YOUR_API_ID>",
   "api_hash": "<YOUR_API_HASH>",
@@ -50,7 +51,10 @@ Copy code
   "specified_group_id": "<SPECIFIED_GROUP_ID>",
   "specified_user_id": "<SPECIFIED_USER_ID>"
 }
-3. User Inputs Required
+
+
+### 3. User Inputs Required
+
 API Credentials:
 <YOUR_API_ID>: Your Telegram API ID.
 <YOUR_API_HASH>: Your Telegram API hash.
@@ -63,7 +67,9 @@ Forwarding Targets:
 Filters:
 <SPECIFIED_GROUP_ID>: The group where messages from a specific user will be filtered.
 <SPECIFIED_USER_ID>: The Telegram user ID to monitor in the specified group.
-▶️ Run the Bot
+
+
+### ▶️ Run the Bot
 After completing the setup, start the bot with:
 
 bash
@@ -71,7 +77,7 @@ Copy code
 python bot.py
 
 
- 🔍 How It Works
+### 🔍 How It Works
 Message Monitoring:
 
 The bot listens to messages from the configured groups.
