@@ -70,10 +70,10 @@ Filters:
 After completing the setup:
 
 ```bash
-python bot.py
+python bot.py.
 
 
-##  🔍 How It Works
+ 🔍 How It Works
 Message Monitoring:
 
 The bot listens to messages from the configured groups.
